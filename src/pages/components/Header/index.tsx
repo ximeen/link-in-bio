@@ -5,7 +5,7 @@ export default function Header() {
 
       className="flex flex-col justify-center items-center pt-10">
       <img
-        src="/profile-image.jpeg"
+        src="/profile-icon.png"
         alt="profile image"
         className="h-40 w-40 rounded-full" />
       <section className="mt-10 flex flex-col gap-2 text-center text-white">
