@@ -1,0 +1,30 @@
+/* eslint-disable @next/next/no-img-element */
+import { CaretRight } from "@phosphor-icons/react";
+
+export default function ProductLinks() {
+  return (
+    <section className="flex flex-col gap-4 pt-10 w-full md:justify-center md:items-center">
+      <a
+        href="https://ev.braip.com/ref?pv=pro3yoz3&af=afig7lep1"
+        className="flex p-2 bg-zinc-600 text-white rounded-md items-center justify-between md:w-1/2 lg:w-1/3">
+        <img
+          className="w-12 h-12 rounded-md"
+          src="/lift-detox.jpg"
+          alt="product lift detox" />
+        Lift Detox
+        <CaretRight size={24} color="#4ade80" />
+      </a>
+
+      <a
+        href="https://ev.braip.com/ref?pv=pro7r6w7&af=afip91l3z"
+        className="flex p-2 bg-zinc-600 text-white rounded-md items-center justify-between md:w-1/2 lg:w-1/3">
+        <img
+          className="w-12 h-12 rounded-md"
+          src="/revera-vit.jpg"
+          alt="product ReveraVit" />
+        ReveraVit
+        <CaretRight size={24} color="#4ade80" />
+      </a>
+    </section>
+  )
+}
