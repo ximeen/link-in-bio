@@ -1,3 +1,6 @@
+"use client"
+import { MapPin } from "@phosphor-icons/react";
+
 /* eslint-disable @next/next/no-img-element */
 export default function Header() {
   return (
@@ -13,7 +16,9 @@ export default function Header() {
           <h3 className="text-2xl font-semibold">Giselle Ximenes </h3>
           <img className="h-7 w-7 " src="/verify.png" alt="" />
         </div>
-        <span className="text-lg">Brasil</span>
+        <div>
+          <span className="flex text-lg justify-center gap-1"><MapPin size={28} color="#4ade80" /> Brasil</span>
+        </div>
       </section>
     </header>
   )
