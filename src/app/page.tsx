@@ -6,7 +6,7 @@ import SocialMedias from "./components/SocialMedias";
 
 export default function Home() {
   return (
-    <main className="p-4">
+    <main className="px-4 mb-10">
       <Head >
         <title>Meus produtos</title>
       </Head>
