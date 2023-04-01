@@ -3,17 +3,17 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import { InstagramLogo, TiktokLogo, WhatsappLogo, MapPin } from "@phosphor-icons/react";
+import { useState } from "react";
 
 import SocialMedias from "./components/SocialMedias";
 import ProductLinks from "./components/ProductLinks";
-
+import { ProductItems } from "../database/products"
 
 export default function Home() {
+  const [products] = useState(ProductItems)
+
   return (
     <main className="px-4 mb-10">
-      <Head >
-        <title>Meus produtos</title>
-      </Head>
       <header
         className="flex flex-col justify-center items-center pt-10">
         <img
@@ -45,24 +45,15 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col gap-4 pt-10 w-full md:justify-center md:items-center">
-        <ProductLinks
-          href="https://wa.me/5599991436500?text=Olá%20tenho%20interesse%20no%20LiftDetox"
-          srcImage="/lift-detox.jpg"
-          altImage="Imagem do produto, lift detox"
-          productName="Lift Detox"
-        />
-        <ProductLinks
-          href="https://wa.me/5599991436500?text=Olá%20tenho%20interesse%20no%20Reveravit"
-          srcImage="/revera-vit.jpg"
-          altImage="Imagem do produto, ReveraVit"
-          productName="ReveraVit"
-        />
-        <ProductLinks
-          href="https://wa.me/5599991436500?text=Olá%20tenho%20interesse%20no%20Rosa%20Amazonica"
-          srcImage="/rosa-amazonica.png"
-          altImage="Imagem do produto, Rosa Amazonica"
-          productName="Rosa amazônica"
-        />
+        {products.map(product => (
+          <ProductLinks
+            key={product.id}
+            productName={product.name}
+            altImage={product.alt}
+            srcImage={product.image}
+            href={product.href}
+          />
+        ))}
       </section>
     </main>
   )
